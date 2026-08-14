@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Betzabe Canchari Aguirre | Psicología & Gestión Humana</title>
+
+  <meta
+    name="description"
+    content="Betzabe Canchari Aguirre — Psicología Organizacional, Reclutamiento, Selección y Formación Humana."
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--
+    ============================================================
+    TAILWIND CONFIG
+    Equivalente a tailwind.config.js
+    ============================================================
+  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: "#06101E",
+            navy: "#0E1B2E",
+            electric: "#1C85E8",
+            white: "#FFFFFF",
+            secondary: "#8A99AD",
+            coral: "#E05275",
+            content: "#1E2530"
+          },
+
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Manrope", "sans-serif"]
+          },
+
+          boxShadow: {
+            glow: "0 0 40px rgba(28, 133, 232, 0.18)",
+            card: "0 20px 60px rgba(0,0,0,0.25)"
+          },
+
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            "fade-up": "fadeUp .8s ease forwards"
+          },
+
+          keyframes: {
+            float: {
+              "0%, 100%": {
+                transform: "translateY(0)"
+              },
+              "50%": {
+                transform: "translateY(-12px)"
+              }
+            },
+
+            fadeUp: {
+              "0%": {
+                opacity: "0",
+                transform: "translateY(20px)"
+              },
+              "100%": {
+                opacity: "1",
+                transform: "translateY(0)"
+              }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #06101E;
+      color: #FFFFFF;
+      font-family: "Inter", sans-serif;
+    }
+
+    .font-display {
+      font-family: "Manrope", sans-serif;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #FFFFFF 0%,
+        #1C85E8 55%,
+        #E05275 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    .glass {
+      background: rgba(14, 27, 46, .72);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .blue-glow {
+      box-shadow:
+        0 0 0 1px rgba(28,133,232,.08),
+        0 0 80px rgba(28,133,232,.12);
+    }
+
+    .service-card {
+      transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(28,133,232,.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: #1C85E8;
+      transition: width .3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all .8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile menu */
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    #mobileMenu.open {
+      max-height: 400px;
+    }
+  </style>
+</head>
+
+
+<body class="overflow-x-hidden">
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header
+    id="header"
+    class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-night/80 backdrop-blur-xl"
+  >
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+      <div class="flex h-20 items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3">
+
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-electric font-display text-lg font-extrabold shadow-glow"
+          >
+            BC
+          </div>
+
+          <div class="hidden sm:block">
+            <p class="font-display text-sm font-bold tracking-wide">
+              BETZABE CANCHARI
+            </p>
+
+            <p class="text-[10px] uppercase tracking-[0.25em] text-secondary">
+              Gestión Humana
+            </p>
+          </div>
+
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden items-center gap-8 md:flex">
+
+          <a href="#inicio" class="nav-link text-sm text-secondary transition hover:text-white">
+            Inicio
+          </a>
+
+          <a href="#servicios" class="nav-link text-sm text-secondary transition hover:text-white">
+            Servicios
+          </a>
+
+          <a href="#sobre-mi" class="nav-link text-sm text-secondary transition hover:text-white">
+            Sobre mí
+          </a>
+
+          <a href="#experiencia" class="nav-link text-sm text-secondary transition hover:text-white">
+            Experiencia
+          </a>
+
+          <a href="#contacto" class="rounded-full bg-electric px-5 py-2.5 text-sm font-semibold transition hover:bg-blue-500 hover:shadow-glow">
+            Contacto
+          </a>
+
+        </nav>
+
+
+        <!-- Mobile button -->
+        <button
+          id="menuButton"
+          class="rounded-lg border border-white/10 p-2 text-secondary md:hidden"
+          aria-label="Abrir menú"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+      </div>
+
+
+      <!-- Mobile navigation -->
+      <div id="mobileMenu" class="md:hidden">
+
+        <nav class="flex flex-col gap-1 pb-5">
+
+          <a href="#inicio" class="rounded-lg px-4 py-3 text-secondary hover:bg-white/5 hover:text-white">
+            Inicio
+          </a>
+
+          <a href="#servicios" class="rounded-lg px-4 py-3 text-secondary hover:bg-white/5 hover:text-white">
+            Servicios
+          </a>
+
+          <a href="#sobre-mi" class="rounded-lg px-4 py-3 text-secondary hover:bg-white/5 hover:text-white">
+            Sobre mí
+          </a>
+
+          <a href="#experiencia" class="rounded-lg px-4 py-3 text-secondary hover:bg-white/5 hover:text-white">
+            Experiencia
+          </a>
+
+          <a href="#contacto" class="mt-2 rounded-lg bg-electric px-4 py-3 text-center font-semibold">
+            Contacto
+          </a>
+
+        </nav>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <main>
+
+    <section
+      id="inicio"
+      class="relative flex min-h-screen items-center overflow-hidden pt-24"
+    >
+
+      <!-- Background grid -->
+      <div class="hero-grid absolute inset-0"></div>
+
+      <!-- Decorative glow -->
+      <div
+        class="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-electric/10 blur-[100px]"
+      ></div>
+
+      <div
+        class="absolute -left-40 bottom-20 h-[350px] w-[350px] rounded-full bg-coral/5 blur-[100px]"
+      ></div>
+
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[1.15fr_.85fr] lg:gap-20">
+
+        <!-- Hero copy -->
+        <div class="reveal">
+
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-electric/20 bg-electric/5 px-4 py-2 text-xs font-medium text-blue-300">
+
+            <span class="h-2 w-2 rounded-full bg-electric shadow-[0_0_10px_#1C85E8]"></span>
+
+            Psicología Organizacional & Gestión Humana
+
+          </div>
+
+
+          <h1
+            class="font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-7xl"
+          >
+
+            Conectando
+            <span class="gradient-text">
+              talento
+            </span>
+
+            con oportunidades.
+
+          </h1>
+
+
+          <p class="mt-7 max-w-2xl text-base leading-8 text-secondary sm:text-lg">
+
+            Soy <strong class="text-white">Betzabe Canchari Aguirre</strong>,
+            psicóloga especializada en Reclutamiento, Selección y Formación,
+            enfocada en generar experiencias que conecten a las personas
+            con organizaciones donde puedan desarrollarse.
+
+          </p>
+
+
+          <!-- CTA -->
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+
+            <a
+              href="#contacto"
+              class="group inline-flex items-center justify-center gap-3 rounded-xl bg-electric px-6 py-3.5 font-semibold text-white shadow-glow transition hover:-translate-y-1 hover:bg-blue-500"
+            >
+
+              Hablemos de un proyecto
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+
+            </a>
+
+
+            <a
+              href="#sobre-mi"
+              class="inline-flex items-center justify-center rounded-xl border border-white/10 px-6 py-3.5 font-semibold text-white transition hover:border-white/20 hover:bg-white/5"
+            >
+              Conóceme
+            </a>
+
+          </div>
+
+
+          <!-- Stats -->
+          <div class="mt-12 grid max-w-xl grid-cols-3 border-t border-white/10 pt-7">
+
+            <div>
+              <p class="font-display text-2xl font-bold sm:text-3xl">
+                +5
+              </p>
+
+              <p class="mt-1 text-xs leading-5 text-secondary sm:text-sm">
+                años de experiencia
+              </p>
+            </div>
+
+
+            <div class="border-l border-white/10 pl-5">
+              <p class="font-display text-2xl font-bold sm:text-3xl">
+                360°
+              </p>
+
+              <p class="mt-1 text-xs leading-5 text-secondary sm:text-sm">
+                visión del talento
+              </p>
+            </div>
+
+
+            <div class="border-l border-white/10 pl-5">
+              <p class="font-display text-2xl font-bold sm:text-3xl">
+                HR
+              </p>
+
+              <p class="mt-1 text-xs leading-5 text-secondary sm:text-sm">
+                enfoque estratégico
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Hero visual -->
+        <div class="relative reveal">
+
+          <!-- Decorative circle -->
+          <div class="absolute -inset-5 rounded-[2rem] border border-electric/10"></div>
+
+          <div class="absolute -inset-10 rounded-[3rem] border border-white/5"></div>
+
+
+          <div class="glass blue-glow relative overflow-hidden rounded-[2rem] p-6 sm:p-8">
+
+            <!-- Top bar -->
+            <div class="mb-8 flex items-center justify-between">
+
+              <div class="flex gap-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-coral"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-electric"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-white/30"></span>
+              </div>
+
+              <span class="text-xs text-secondary">
+                PEOPLE • TALENT • GROWTH
+              </span>
+
+            </div>
+
+
+            <!-- Profile -->
+            <div class="flex items-center gap-5">
+
+              <div
+                class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-electric to-blue-400 font-display text-2xl font-extrabold shadow-glow"
+              >
+                BC
+              </div>
+
+              <div>
+
+                <p class="font-display text-xl font-bold">
+                  Betzabe Canchari
+                </p>
+
+                <p class="mt-1 text-sm text-secondary">
+                  Psicóloga Organizacional
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- Skills -->
+            <div class="mt-8 space-y-4">
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-xs">
+                  <span class="text-secondary">
+                    Reclutamiento & Selección
+                  </span>
+
+                  <span class="text-electric">
+                    Expertise
+                  </span>
+                </div>
+
+                <div class="h-2 overflow-hidden rounded-full bg-white/5">
+                  <div class="h-full w-[94%] rounded-full bg-electric"></div>
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-xs">
+                  <span class="text-secondary">
+                    Formación & Desarrollo
+                  </span>
+
+                  <span class="text-electric">
+                    Expertise
+                  </span>
+                </div>
+
+                <div class="h-2 overflow-hidden rounded-full bg-white/5">
+                  <div class="h-full w-[88%] rounded-full bg-electric"></div>
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-xs">
+                  <span class="text-secondary">
+                    Gestión del talento
+                  </span>
+
+                  <span class="text-coral">
+                    Estratégico
+                  </span>
+                </div>
+
+                <div class="h-2 overflow-hidden rounded-full bg-white/5">
+                  <div class="h-full w-[90%] rounded-full bg-coral"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Quote -->
+            <div class="mt-8 rounded-xl border border-white/5 bg-white/[.03] p-5">
+
+              <p class="text-sm leading-6 text-secondary">
+                "Las organizaciones crecen cuando las personas encuentran
+                espacios donde pueden aportar, aprender y evolucionar."
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SERVICES
+    ========================================================== -->
+
+    <section id="servicios" class="relative py-24 sm:py-32">
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+        <div class="reveal max-w-2xl">
+
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[.25em] text-electric">
+            Servicios
+          </p>
+
+          <h2 class="font-display text-3xl font-extrabold sm:text-5xl">
+            Soluciones centradas
+            <span class="text-secondary">
+              en las personas.
+            </span>
+          </h2>
+
+          <p class="mt-5 leading-7 text-secondary">
+            Una mirada integral que combina psicología, estrategia y
+            tecnología para mejorar la experiencia del talento.
+          </p>
+
+        </div>
+
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+
+          <!-- Service 1 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-electric/10 text-electric">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 13.255A23.931 23.931 0 0112 16c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 0V2m-7 4h14a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Reclutamiento & Selección
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Procesos de selección orientados a encontrar personas que
+              conecten con las necesidades técnicas y culturales de cada
+              organización.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-electric">
+              Talent Acquisition
+            </span>
+
+          </article>
+
+
+          <!-- Service 2 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-coral/10 text-coral">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6V4m0 16v-2m8-6h-2M6 12H4m13.657-5.657l-1.414 1.414M7.757 16.243l-1.414 1.414m10.9 0l-1.414-1.414M7.757 7.757L6.343 6.343M12 16a4 4 0 100-8 4 4 0 000 8z"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Formación & Desarrollo
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Diseño de experiencias de aprendizaje que buscan transformar
+              conocimientos en comportamientos aplicables al trabajo.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-coral">
+              Learning & Development
+            </span>
+
+          </article>
+
+
+          <!-- Service 3 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-electric/10 text-electric">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Gestión del Talento
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Propuestas orientadas a fortalecer procesos, competencias y
+              experiencias que contribuyan al desarrollo de las personas.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-electric">
+              People Management
+            </span>
+
+          </article>
+
+
+          <!-- Service 4 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-electric/10 text-electric">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Evaluación por Competencias
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Evaluación estructurada de competencias para facilitar
+              decisiones de selección y desarrollo con mayor objetividad.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-electric">
+              Assessment
+            </span>
+
+          </article>
+
+
+          <!-- Service 5 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-coral/10 text-coral">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Mejora de Procesos HR
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Identificación de oportunidades de mejora para hacer más
+              eficientes y consistentes los procesos de personas.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-coral">
+              HR Improvement
+            </span>
+
+          </article>
+
+
+          <!-- Service 6 -->
+          <article class="service-card reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <div class="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-electric/10 text-electric">
+
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 20h9M3 20h3m6 0V4m0 0L8 8m4-4l4 4M7 16h10"/>
+              </svg>
+
+            </div>
+
+            <h3 class="font-display text-xl font-bold">
+              Consultoría Humana
+            </h3>
+
+            <p class="mt-4 text-sm leading-7 text-secondary">
+              Acompañamiento para convertir desafíos relacionados con
+              personas en oportunidades concretas de crecimiento.
+            </p>
+
+            <span class="mt-6 inline-block text-xs font-semibold uppercase tracking-wider text-electric">
+              Human Consulting
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+
+    <section id="sobre-mi" class="bg-navy/40 py-24 sm:py-32">
+
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
+
+        <!-- Visual -->
+        <div class="reveal relative order-2 lg:order-1">
+
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-navy p-3">
+
+            <div class="flex min-h-[420px] items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-electric/20 via-navy to-coral/10">
+
+              <div class="text-center">
+
+                <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full border border-electric/30 bg-electric/10 font-display text-4xl font-extrabold text-electric shadow-glow">
+                  BC
+                </div>
+
+                <p class="mt-6 font-display text-xl font-bold">
+                  Personas + Estrategia
+                </p>
+
+                <p class="mt-2 text-sm text-secondary">
+                  El talento como motor de transformación
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Floating card -->
+          <div class="glass absolute -bottom-7 -right-3 hidden w-64 rounded-2xl p-5 shadow-card sm:block">
+
+            <div class="flex items-center gap-3">
+
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-electric/10 text-electric">
+                ✦
+              </div>
+
+              <div>
+                <p class="text-xs text-secondary">
+                  Mi enfoque
+                </p>
+
+                <p class="text-sm font-bold">
+                  Estratégico & Humano
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Copy -->
+        <div class="reveal order-1 lg:order-2">
+
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[.25em] text-electric">
+            Sobre mí
+          </p>
+
+          <h2 class="font-display text-3xl font-extrabold leading-tight sm:text-5xl">
+            Psicología aplicada
+            <span class="text-secondary">
+              al mundo laboral.
+            </span>
+          </h2>
+
+
+          <div class="mt-7 space-y-5 text-secondary leading-8">
+
+            <p>
+              Soy <strong class="text-white">Betzabe Canchari Aguirre</strong>,
+              Licenciada en Psicología con experiencia en el ámbito de la
+              Psicología Organizacional.
+            </p>
+
+            <p>
+              Mi experiencia se ha desarrollado principalmente en
+              <strong class="text-white">Reclutamiento y Selección</strong>,
+              evaluación de candidatos, gestión del talento y
+              <strong class="text-white">formación interna</strong>.
+            </p>
+
+            <p>
+              Me interesa especialmente crear soluciones que combinen
+              análisis, tecnología y una mirada humana para generar mejores
+              experiencias tanto para las organizaciones como para las
+              personas.
+            </p>
+
+          </div>
+
+
+          <div class="mt-9 grid grid-cols-2 gap-4">
+
+            <div class="rounded-xl border border-white/5 bg-white/[.03] p-5">
+
+              <p class="font-display text-2xl font-bold text-electric">
+                Analítica
+              </p>
+
+              <p class="mt-2 text-xs leading-5 text-secondary">
+                Decisiones basadas en información.
+              </p>
+
+            </div>
+
+
+            <div class="rounded-xl border border-white/5 bg-white/[.03] p-5">
+
+              <p class="font-display text-2xl font-bold text-coral">
+                Humana
+              </p>
+
+              <p class="mt-2 text-xs leading-5 text-secondary">
+                Personas en el centro.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EXPERIENCE
+    ========================================================== -->
+
+    <section id="experiencia" class="py-24 sm:py-32">
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+        <div class="reveal max-w-2xl">
+
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[.25em] text-electric">
+            Experiencia
+          </p>
+
+          <h2 class="font-display text-3xl font-extrabold sm:text-5xl">
+            Experiencia que
+            <span class="gradient-text">
+              conecta.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="mt-14 grid gap-5 md:grid-cols-3">
+
+          <div class="reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <span class="text-sm font-semibold text-electric">
+              01
+            </span>
+
+            <h3 class="mt-5 font-display text-xl font-bold">
+              Selección
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-secondary">
+              Gestión de procesos de atracción, evaluación y selección de
+              talento para diferentes perfiles y organizaciones.
+            </p>
+
+          </div>
+
+
+          <div class="reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <span class="text-sm font-semibold text-coral">
+              02
+            </span>
+
+            <h3 class="mt-5 font-display text-xl font-bold">
+              Formación
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-secondary">
+              Diseño y actualización de experiencias de aprendizaje,
+              inducción y formación continua.
+            </p>
+
+          </div>
+
+
+          <div class="reveal rounded-2xl border border-white/5 bg-navy p-7">
+
+            <span class="text-sm font-semibold text-electric">
+              03
+            </span>
+
+            <h3 class="mt-5 font-display text-xl font-bold">
+              Mejora
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-secondary">
+              Identificación de oportunidades para optimizar procesos y
+              desarrollar mejores prácticas dentro de HR.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CTA
+    ========================================================== -->
+
+    <section class="px-5 py-10 sm:px-8">
+
+      <div class="mx-auto max-w-7xl">
+
+        <div class="relative overflow-hidden rounded-[2rem] bg-electric p-8 sm:p-12 lg:p-16">
+
+          <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
+
+          <div class="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+
+            <div class="max-w-2xl">
+
+              <p class="text-sm font-semibold uppercase tracking-[.2em] text-white/70">
+                ¿Tienes un desafío?
+              </p>
+
+              <h2 class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">
+                Hagamos que las personas sean parte de la solución.
+              </h2>
+
+            </div>
+
+            <a
+              href="#contacto"
+              class="inline-flex shrink-0 items-center justify-center rounded-xl bg-night px-7 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-[#0E1B2E]"
+            >
+              Contactarme
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+
+    <section id="contacto" class="py-24 sm:py-32">
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+        <div class="grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
+
+          <!-- Contact info -->
+          <div class="reveal">
+
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[.25em] text-electric">
+              Contacto
+            </p>
+
+            <h2 class="font-display text-3xl font-extrabold sm:text-5xl">
+              Hablemos.
+            </h2>
+
+            <p class="mt-5 max-w-md leading-7 text-secondary">
+              Si tienes un proyecto, una oportunidad profesional o quieres
+              conversar sobre talento y gestión humana, escríbeme.
+            </p>
+
+
+            <div class="mt-10 space-y-5">
+
+              <div class="flex items-center gap-4">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-electric/10 text-electric">
+                  @
+                </div>
+
+                <div>
+                  <p class="text-xs text-secondary">
+                    Email
+                  </p>
+
+                  <p class="text-sm font-medium">
+                    contacto@betzabecanchari.com
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="flex items-center gap-4">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-electric/10 text-electric">
+                  in
+                </div>
+
+                <div>
+                  <p class="text-xs text-secondary">
+                    LinkedIn
+                  </p>
+
+                  <p class="text-sm font-medium">
+                    Betzabe Canchari Aguirre
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="flex items-center gap-4">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-coral/10 text-coral">
+                  PE
+                </div>
+
+                <div>
+                  <p class="text-xs text-secondary">
+                    Ubicación
+                  </p>
+
+                  <p class="text-sm font-medium">
+                    Lima, Perú
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Form -->
+          <div class="reveal">
+
+            <form
+              id="contactForm"
+              class="rounded-2xl border border-white/5 bg-navy p-6 sm:p-8"
+            >
+
+              <div class="grid gap-5 sm:grid-cols-2">
+
+                <div class="sm:col-span-1">
+
+                  <label for="nombre" class="mb-2 block text-sm font-medium">
+                    Nombre
+                  </label>
+
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    required
+                    placeholder="Tu nombre"
+                    class="w-full rounded-xl border border-white/10 bg-night px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-secondary/60 focus:border-electric focus:ring-2 focus:ring-electric/10"
+                  >
+
+                </div>
+
+
+                <div>
+
+                  <label for="email" class="mb-2 block text-sm font-medium">
+                    Email
+                  </label>
+
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="tu@email.com"
+                    class="w-full rounded-xl border border-white/10 bg-night px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-secondary/60 focus:border-electric focus:ring-2 focus:ring-electric/10"
+                  >
+
+                </div>
+
+
+                <div class="sm:col-span-2">
+
+                  <label for="asunto" class="mb-2 block text-sm font-medium">
+                    Asunto
+                  </label>
+
+                  <input
+                    id="asunto"
+                    name="asunto"
+                    type="text"
+                    required
+                    placeholder="¿En qué podemos conversar?"
+                    class="w-full rounded-xl border border-white/10 bg-night px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-secondary/60 focus:border-electric focus:ring-2 focus:ring-electric/10"
+                  >
+
+                </div>
+
+
+                <div class="sm:col-span-2">
+
+                  <label for="mensaje" class="mb-2 block text-sm font-medium">
+                    Mensaje
+                  </label>
+
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="6"
+                    required
+                    placeholder="Cuéntame brevemente sobre tu proyecto..."
+                    class="w-full resize-none rounded-xl border border-white/10 bg-night px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-secondary/60 focus:border-electric focus:ring-2 focus:ring-electric/10"
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="mt-6 flex w-full items-center justify-center gap-3 rounded-xl bg-electric px-6 py-4 font-semibold transition hover:bg-blue-500 hover:shadow-glow"
+              >
+
+                Enviar mensaje
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+
+              </button>
+
+
+              <p id="formMessage" class="mt-4 hidden text-center text-sm text-electric"></p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="border-t border-white/5 bg-night">
+
+    <div class="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+        <div>
+
+          <p class="font-display font-bold">
+            Betzabe Canchari Aguirre
+          </p>
+
+          <p class="mt-1 text-xs text-secondary">
+            Psicología Organizacional · Gestión Humana · Formación
+          </p>
+
+        </div>
+
+
+        <div class="flex gap-6 text-sm text-secondary">
+
+          <a href="#inicio" class="transition hover:text-white">
+            Inicio
+          </a>
+
+          <a href="#servicios" class="transition hover:text-white">
+            Servicios
+          </a>
+
+          <a href="#sobre-mi" class="transition hover:text-white">
+            Sobre mí
+          </a>
+
+          <a href="#contacto" class="transition hover:text-white">
+            Contacto
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-8 border-t border-white/5 pt-6 text-center text-xs text-secondary md:text-left">
+
+        © <span id="year"></span> Betzabe Canchari Aguirre. Todos los derechos reservados.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* ---------------------------------------------------------
+       Mobile menu
+    --------------------------------------------------------- */
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+      });
+
+    });
+
+
+    /* ---------------------------------------------------------
+       Scroll reveal
+    --------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* ---------------------------------------------------------
+       Contact form
+       Demo: prevents reload.
+       Replace with your backend/Formspree/EmailJS/etc.
+    --------------------------------------------------------- */
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    contactForm.addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+
+      formMessage.textContent =
+        `Gracias, ${nombre}. Tu mensaje ha sido preparado correctamente.`;
+
+      formMessage.classList.remove("hidden");
+
+      contactForm.reset();
+
+    });
+
+
+    /* ---------------------------------------------------------
+       Current year
+    --------------------------------------------------------- */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* ---------------------------------------------------------
+       Header background on scroll
+    --------------------------------------------------------- */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+
+        header.classList.add("shadow-lg");
+
+      } else {
+
+        header.classList.remove("shadow-lg");
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
